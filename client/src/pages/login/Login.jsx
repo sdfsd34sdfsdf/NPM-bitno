@@ -1,21 +1,24 @@
 import React from "react";
 import axios from "axios";
 import { useEffect } from "react";
+import AuthService from "../../services/auth-servis";
 
 function Login() {
 
-    /*const [state, setState] = useState({ name: "" });
+    const [state, setState] = useState({ name: "" });
 
     const onLogin = () => {
-        AuthService.register(state)
+        AuthService.login(state)
             .then(res => {
-                console.log(res.data)
+                console.log(res.data);
+                AuthService.storeUserData(res.data)
             })
-    }*/
+    }
 
     return (
         <div>
             Login: <input type="text" />
+            <button onClick={onLogin}>Login</button>
         </div>
     )
 }
