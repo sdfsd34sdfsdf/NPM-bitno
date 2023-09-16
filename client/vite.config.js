@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       '/data': 'http://localhost:8080',
       "/upis": 'http://localhost:8080',
-      "/login": 'http://localhost:8080'
+      "/loginn": 'http://localhost:8080'
     }
   }
 })

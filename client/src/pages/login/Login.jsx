@@ -17,7 +17,8 @@ function Login() {
 
     return (
         <div>
-            Login: <input type="text" />
+            Login: <input type="text"
+                onChange={event => setState({ ...state, name: event.target.value })} />
             <button onClick={onLogin}>Login</button>
         </div>
     )
