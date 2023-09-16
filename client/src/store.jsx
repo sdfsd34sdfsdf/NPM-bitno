@@ -1,7 +1,8 @@
 import { createStore, combineReducers } from "redux";
+import { userReducer } from "./pages/login/store/reducer";
 
 const store = combineReducers({
-    userStore:  userReduser
+    userStore: userReducer
 })
 
 export default createStore(store);

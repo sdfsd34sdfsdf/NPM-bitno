@@ -1,4 +1,4 @@
-import { STORE_USER, REMOVE_USER } form "./types";
+import { STORE_USER, REMOVE_USER } from "./types";
 
 export const setUser = () => {
     return {
