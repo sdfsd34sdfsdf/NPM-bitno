@@ -1,17 +1,22 @@
-import axios from "axios";
 import React, { useState } from "react";
-import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import AuthService from "../../services/auth-servis";
+import {setUser} from "./store/actions"
 
 function Login() {
 
     const [state, setState] = useState({ name: "" });
+    const dispatch = useDispatch();
+    const navigateTo = useNavigate();
 
     const onLogin = () => {
         AuthService.login(state)
             .then(res => {
                 console.log(res.data);
-                AuthService.storeUserData(res.data)
+                AuthService.storeUserData(res.data);
+                dispatch(setUser(res.data))
+                navigateTo('/home')
             })
     }
 

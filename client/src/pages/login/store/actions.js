@@ -1,6 +1,6 @@
 import { STORE_USER, REMOVE_USER } from "./types";
 
-export const setUser = () => {
+export const setUser = (user) => {
     return {
         type: STORE_USER,
         payload: user
