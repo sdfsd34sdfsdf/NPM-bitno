@@ -1,17 +1,19 @@
 import React from 'react'
 import Navbar from './pages/Navbar'
-import Register from './pages/Register'
-import Login from './pages/Login'
+import Register from './pages/register/Register'
+import Login from './pages/login/Login'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="register" element={<Register />} />
-      </Routes>
-    </BrowserRouter>
+    <Provaider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="register" element={<Register />} />
+        </Routes>
+      </BrowserRouter>
+    </Provaider>
   )
 }
 
